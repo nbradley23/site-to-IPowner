@@ -1,1 +1,2 @@
-# python
+# Site to IP Owner Script
+This script processes a specified Excel spreadsheet containing a collection of website URLs and converts this data into a structured Python list. Following this, the script iterates through each URL in the list and performs a DNS lookup to extract the associated IP address of the website. Using this IP address, the script initiates a WhoIs lookup to gather information about the organization linked to the IP address ownership. The final output is a Python dictionary in which website URLs are paired with their respective organizational information. To complete the script this dictionary is then converted into an Excel spreadsheet.
