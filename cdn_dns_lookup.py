@@ -24,7 +24,7 @@ for site in site_list:
     else:
         resolver = dns.resolver.Resolver()
         try:
-            # Resolves URL to IP adress
+            # Resolves URL to IP address
             results = list(resolver.resolve(f'{site}', "A"))[0]
             obj = IPWhois(results)
             # Saves the name of the owner of the IP address
@@ -34,11 +34,7 @@ for site in site_list:
         except:
             site_and_cdn[site] = 'Unable to process'
 
-
-# print(site_and_cdn)
-
-
-# Export to excel spreadsheet
-# df = pd.DataFrame(data=site_and_cdn, index=[0])
-# df = (df.T)
-# df.to_excel('sites-and-cdns.xlsx')
+#Export to excel spreadsheet
+df = pd.DataFrame(data=site_and_cdn, index=[0])
+df = (df.T)
+df.to_excel('sites-and-cdns.xlsx')
